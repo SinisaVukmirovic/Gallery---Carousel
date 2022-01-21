@@ -27,8 +27,8 @@ body {
         position: absolute;
         inset: 0;
         opacity: 0;
-        transition: opacity 500ms ease-in-out;
-        transition-delay: 500ms;
+        transition: opacity 300ms ease-in-out;
+        transition-delay: 300ms;
     }
     .slide[data-active] {
         opacity: 1;
