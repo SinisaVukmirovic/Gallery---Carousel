@@ -10,11 +10,25 @@ body {
     min-height: 100vh;
     display: grid;
     place-items: center;
+    font-family: sans-serif;
 }
 
 section {
     margin: 5rem 0;
+    position: relative;
 }
+    section::before {
+        position: absolute;
+        top: -8rem;
+        right: -10rem;
+        /* opacity: .3; */
+        color: rgba(5, 226, 255, 0.1);
+        font-size: 10rem;
+        font-weight: bold;
+    }
+        section:nth-of-type(1)::before { content: "Desks"; }
+        section:nth-of-type(2)::before { content: "Rooms"; }
+        section:nth-of-type(3)::before { content: "Dogs"; }
 
 .carousel {
     width: 50vw;
@@ -77,19 +91,34 @@ section {
             }
 
 @media (max-width:1024px) {
+    html {
+        font-size: 14px;
+    }
     .carousel {
         width: 70vw;
     }
 }
 
 @media (max-width:768px) {
+    html {
+        font-size: 12px;
+    }
     .carousel {
         width: 80vw;
+    }
+    section::before {
+        right: -5rem;
     }
 }
 
 @media (max-width: 414px) {
+    html {
+        font-size: 10px;
+    }
     .carousel {
         width: 90vw;
+    }
+    section::before {
+        right: 0;
     }
 }
