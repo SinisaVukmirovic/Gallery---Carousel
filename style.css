@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    padding: 5rem 0;
     background-color: #222;
     color: #ddd;
     min-height: 100vh;
@@ -74,3 +75,21 @@ section {
             .carousel-btn.next {
                 right: 1rem;
             }
+
+@media (max-width:1024px) {
+    .carousel {
+        width: 70vw;
+    }
+}
+
+@media (max-width:768px) {
+    .carousel {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 414px) {
+    .carousel {
+        width: 90vw;
+    }
+}
