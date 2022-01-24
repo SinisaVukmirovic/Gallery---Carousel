@@ -3,6 +3,7 @@
 }
 
 body {
+    position: relative;
     margin: 0;
     padding: 5rem 0;
     background-color: #222;
@@ -14,14 +15,13 @@ body {
 }
 
 section {
-    margin: 5rem 0;
+    margin: 6rem 0;
     position: relative;
 }
     section::before {
         position: absolute;
         top: -8rem;
         right: -10rem;
-        /* opacity: .3; */
         color: rgba(5, 226, 255, 0.15);
         font-size: 10rem;
         font-weight: bold;
@@ -33,12 +33,12 @@ section {
     section::after {
         content: '';
         position: absolute;
+        z-index: -1;
         bottom: -2rem;
         left: -4rem;
         width: 80%;
         height: 80%;
         border: 1rem solid rgba(5, 226, 255, 0.15);
-        /* opacity: .3; */
     }
 
 .carousel {
@@ -100,6 +100,32 @@ section {
             .carousel-btn.next {
                 right: 1rem;
             }
+
+.overlay {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #222;
+    background-image: url('./intro.jpg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: end center;
+}
+    .info {
+        color: #ddd;
+        font-size: 2rem;
+        animation: blink 2s linear infinite alternate;
+    }
+    @keyframes blink {
+        50% {
+            opacity: .3;
+        }
+    }
 
 @media (max-width:1024px) {
     html {

@@ -1,3 +1,7 @@
+window.onload = function() {
+    document.querySelector('.overlay').style.display = 'none';
+};
+
 const btns = document.querySelectorAll('[data-carousel-btn]');
 
 btns.forEach(btn => btn.addEventListener('click', () => {
